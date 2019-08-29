@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Chundan OCR</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <style>
+   .slantedDivA{
+      position: relative;
+      width: 100%;
+      height: 2px;
+	  z-index: ;
+	 font-size:50px; 
+	
+   
+    }
+	  .slantedDivB{
+      position: relative;
+      width: 100%;
+      height: 2px;
+	  z-index: ;
+	
+	
+   
+    }
+	
+	
+.title{
+font-size:170px;
+text-align:center;
+margin-top:5%;
+margin-bottom:20%
+
+}
+    .slantedDivA:before{
+      position: absolute;
+      width: 100%;
+      height: 80vh;
+      content: '';
+      background-image:url('https://i.pinimg.com/originals/21/27/51/212751248e6f6591846481281fe045dc.jpg');
+	  background-size:cover;
+	  background-attachment:fixed;
+	  background-repeat:no-repeat;
+      z-index: -1;
+      top: -10%;
+      right: 0;
+      bottom: 0%;
+      left: 0;
+	  transform-origin: right;
+      transform: skewY(4deg);
+    
+    }
+	    .slantedDivB:before{
+      position: absolute;
+      width: 100%;
+      height: 4vh;
+      content: '';
+     background:#3399ff;
+      z-index: -1;
+      top: 0%;
+      right: 0;
+      bottom: 0%;
+      left: 0;
+	  transform-origin: right;
+      transform: skewY(-4deg);
+    
+    }
+	
+	
+	
+	
+   
+   body{
+   margin-top:0px;
+   height:100%;}
+   
+   .out{border:1px solid black;
+   
+   }
+   
+   
+   .idle{
+   
+   height:200px;
+   border:1px solid black;
+   }
+   .ocrs{
+   border-radius:25px;
+   
+   }
+   
+   #fileuploader{
+   height:0.1px;
+   width:0.1px;
+   position:absolute;
+   opacity:0;
+   }
+   
+   .result{
+   margin-top:25vh;
+   margin-bottom:10vh;
+   }
+   </style>
+   
+   
+ </head>
+ <body >
+<div class="slantedDivA">
+<center></center>
+</div>
+<div class="title">
+<div class="row">
+<div class="col-xs-offset-3 col-xs-3">
+blue.
+</div>
+<div class="btn-primary col-xs-3 ocrs">ocr
+</div>
+</div>
+</div>	
+	
+
+ 
+  <center><div class="row">
+  
+  <div class="">
+   <div style="font-size:60px;">Upload new File</div>
+   <br>
+   <br>
+  
+   <form action = "http://127.0.0.1:5000/uploader"  method="post" enctype='multipart/form-data'>
+     <p><input  type="file" name="file" id="fileuploader">
+	 <div class="upl">
+	 <label for="fileuploader" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMfEK78jcDBATuWYe5-hipmH-WmOR07B8X9nZyRr34ts4KOUH"></label>
+	 </div>
+	 <br>
+		<br>
+        <input class="btn btn-primary" type="submit" value="Upload">
+		
+   </form>
+   <br><br>
+   {% if msg %}
+   <h1>{{ msg }}</h1>
+   {% endif %}
+</div>
+
+<div class="slantedDivB">
+<center></center>
+</div>
+
+<div class="result">
+   <div style="font-size:10vh;">Result:</div>
+  
+  
+   {% if extracted_text %}
+     <h2><b> The extracted text from the image above is: </b><h2><br>
+	 <div class="out container">
+	 <h4> {{ extracted_text }} </h4></div>
+  
+   {% else %}
+     <div class="idle out container ">The extracted text will be displayed here</div>
+   {% endif %}
+   </div>
+   </div>
+   </center>
+ </body>
+ </html>
