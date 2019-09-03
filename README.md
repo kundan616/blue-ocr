@@ -13,6 +13,7 @@ it would either be c:\program files\tesseract-OCR\tesseract
 or
 be c:\program files(x86)\tesseract-OCR\tesseract
 run pip install pytesseract
+    pip install flask
     pip install pillow
     pip install os
     
