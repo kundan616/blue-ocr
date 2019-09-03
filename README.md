@@ -15,3 +15,6 @@ be c:\program files(x86)\tesseract-OCR\tesseract
 run pip install pytesseract
     pip install pillow
     pip install os
+    
+now run blueocr.py 
+and type ip address shown in the console in your browser
