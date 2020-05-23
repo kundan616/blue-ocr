@@ -1,21 +1,22 @@
 # blue-ocr
 
-to run the blue ocr in your browser follow these steps
+To run the blue ocr in your browser follow these steps
 
------for windows-----
-install tesseract ocr engine usingone of these following links based on your os(64bit/32bit)
-https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20190708.exe (32bit)
-https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20190708.exe (64bit)
+<b>-----for windows-----</b><br>
+install tesseract ocr engine usingone of these following links based on your os(64bit/32bit)<br>
+https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20190708.exe (32bit)<br><br>
+https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20190708.exe (64bit)<br>
 
-change the path in blue-ocr.py to your directorywhere you instaled tesseract
-pytesseract.pytesseract.tesseract_cmd = r'--your path here--'
-it would either be c:\program files\tesseract-OCR\tesseract
-or
-be c:\program files(x86)\tesseract-OCR\tesseract
-run pip install pytesseract
-    pip install flask
-    pip install pillow
-    pip install os
+change the path in blue-ocr.py to your directorywhere you instaled tesseract<br>
+pytesseract.pytesseract.tesseract_cmd = r'--your path here--'<br>
+it would either be c:\program files\tesseract-OCR\tesseract<br>
+<b>OR</b><br>
+be c:\program files(x86)\tesseract-OCR\tesseract<br>
+run<br>
+pip install pytesseract<br>
+pip install flask<br>
+pip install pillow<br>
+pip install os<br>
     
-now run blueocr.py 
-and type ip address shown in the console in your browser
+now run blueocr.py<br> 
+and type ip address shown in the console in your browser<br>
