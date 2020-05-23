@@ -1,4 +1,6 @@
-# blue-ocr
+# Blue OCR
+
+<a href="http://blueocr.pythonanywhere.com/">DEMO</a>
 
 To run the blue ocr in your browser follow these steps
 
